@@ -1,5 +1,4 @@
 # Story_Agent 
-# StoryStream AI
 
 An agentic AI system built with LangGraph that takes your idea and generates a creative story with an AI image.
 
