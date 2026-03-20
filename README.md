@@ -1,31 +1,44 @@
-# Story_Agent 
+# Story Agent
 
-An agentic AI system built with LangGraph that takes your idea and generates a creative story with an AI image.
+An AI-powered agentic system that transforms your ideas into vivid narratives and stunning visuals.
 
-## How it works
-1. You enter an idea
-2. Orchestra node analyzes it and plans the output
-3. Story Writer node writes a vivid creative story
-4. Image Generator node creates an image using HuggingFace Stable Diffusion
+## How It Works
+
+The system uses a 3-node pipeline built with LangGraph:
+
+1. **Director Node** - Analyzes your idea and creates a story outline + image description
+2. **Writer Node** - Expands the outline into a rich, detailed narrative
+3. **Visual Generator Node** - Creates an image based on the story using Stable Diffusion
 
 ## Tech Stack
-- LangGraph for orchestration
-- Groq (Llama 3.1) for LLM
-- HuggingFace Stable Diffusion XL for image generation
-- Streamlit for UI
+- LangGraph - for building the agentic pipeline
+- Groq (Llama 3.3-70b) - for story generation
+- HuggingFace Stable Diffusion XL - for image generation
+- Streamlit - for the web interface
 
 ## Setup
+
 1. Clone the repo
-2. Create a `.env` file based on `.env.example`
-3. Fill in your API keys
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run the app: `streamlit run app.py`
+2. Create a virtual environment:
+```bash
+   python -m venv venv
+   venv\Scripts\activate
+```
+3. Install dependencies:
+```bash
+   pip install -r requirements.txt
+```
+4. Create a `.env` file based on `.env.example` and add your API keys
+5. Run the app:
+```bash
+   streamlit run App.py
+```
 
 ## Required API Keys
-- `GROQ_API_KEY` - from console.groq.com
-- `HF_TOKEN` - from huggingface.co/settings/tokens
+- `GROQ_API_KEY` - from console.groq.com (free)
+- `HF_TOKEN` - from huggingface.co/settings/tokens (free)
 
 ## Example
-Input: `a dragon who loves coffee`
+Input: `a lonely robot exploring an abandoned city`
 
-Output: A full story + AI generated image of the dragon!
+The system will generate a full narrative + an AI image of the scene!
